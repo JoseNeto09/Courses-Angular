@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -19,7 +19,7 @@ export class CourseFormComponent implements OnInit {
     private _snackBar: MatSnackBar,
     private location: Location) { 
     this.form = this.formBuilder.group({
-        name: [null],
+        name: new FormControl<string | null>(' '),
         categoria: [null]
       });
     }
