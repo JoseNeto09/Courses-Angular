@@ -1,4 +1,4 @@
-<mat-table  [dataSource]="courses" class="mat-elevation-z8">
+<mat-table  [dataSource]="courses">
 
     <!-- Na Column -->
     <ng-container matColumnDef="name">
@@ -16,13 +16,13 @@
 
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
-      <mat-header-cell *matHeaderCellDef>
+      <mat-header-cell *matHeaderCellDef class="actions-column-header">
         <button mat-mini-fab color="accent" aria-label="Adicionar um Curso">
           <mat-icon (click)="onAdd()">add</mat-icon>
         </button>
       </mat-header-cell>
 
-      <mat-cell *matCellDef="let course">
+      <mat-cell *matCellDef="let course" class="actions-column">
         <button mat-icon-button color="primary" aria-label="Editar Curso">
           <mat-icon>edit</mat-icon>
         </button>
