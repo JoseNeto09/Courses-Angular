@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Course } from '../model/course';
+import { Course } from '../../model/course';
 
 @Component({
   selector: 'app-courses-list',

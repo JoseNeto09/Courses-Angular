@@ -8,7 +8,7 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module'
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './course-form/course-form.component';
-import { CoursesListComponent } from './courses-list/courses-list.component';
+import { CoursesListComponent } from './components/courses-list/courses-list.component';
 
 
 @NgModule({
