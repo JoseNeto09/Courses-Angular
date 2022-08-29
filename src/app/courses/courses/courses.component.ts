@@ -16,9 +16,7 @@ import { CoursesService } from '../services/courses.service';
 
 export class CoursesComponent implements OnInit {
 
-  courses$: Observable <Course[]>;
-  displayedColumns = ['name','categoria','actions'];
-  
+  courses$: Observable <Course[]>;  
   //coursesService: CoursesService;
 
   constructor(private coursesService: CoursesService,
