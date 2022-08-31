@@ -8,19 +8,23 @@ import { Course } from '../../model/course';
 })
 export class CoursesListComponent implements OnInit {
 
-
   @Input() courses: Course[] = [];
   @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
   
   readonly displayedColumns = ['name','categoria','actions'];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onAdd(){
     this.add.emit(true);
   }
+
+  onEdit(course: Course) {
+    this.edit.emit(course);
+  }
+
 
 }
