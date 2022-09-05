@@ -48,4 +48,8 @@ export class CoursesComponent implements OnInit {
   onEdit(course: Course) {
     this.router.navigate(['edit', course.id], { relativeTo: this.route });
   }
+
+  onDelete(course: Course) {
+    this.router.navigate(['delete', course.id], { relativeTo: this.route });
+  }
 }
