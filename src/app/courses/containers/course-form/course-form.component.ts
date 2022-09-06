@@ -32,7 +32,7 @@ export class CourseFormComponent implements OnInit {
   ngOnInit(): void {
     const course: Course = this.route.snapshot.data['course'];
     this.form.setValue({
-      _id: course.id,
+      _id: course._id,
       name: course.name,
       categoria: course.categoria
     })
@@ -47,7 +47,7 @@ export class CourseFormComponent implements OnInit {
     this.location.back();
   }
 
-  onDelete(){
+  private onDelete(){
     this.service.delete(this.form.value)
       .subscribe(this.onDelete);
   }
