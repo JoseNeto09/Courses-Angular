@@ -43,6 +43,6 @@ export class CoursesService {
   }
 
   public delete(record: Partial<Course>){
-    return this.httpClient.delete<Course>(`${this.API}/${record._id}`).pipe(first());
+    return this.httpClient.delete<Course>(`${this.API}/${record._id}`,).pipe(first());
   }
 }

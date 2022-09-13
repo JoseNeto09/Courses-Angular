@@ -47,7 +47,7 @@ export class CourseFormComponent implements OnInit {
     this.location.back();
   }
 
-  private onDelete(){
+  onDelete(){
     this.service.delete(this.form.value)
       .subscribe(this.onDelete);
   }
