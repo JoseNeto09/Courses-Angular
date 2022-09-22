@@ -9,17 +9,13 @@ import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './containers/course-form/course-form.component';
 import { CoursesListComponent } from './components/courses-list/courses-list.component';
-import { LoginComponent } from './containers/account/login/login.component';
-import { CreateAccountComponent } from './components/create-account/create-account.component';
 
 
 @NgModule({
   declarations: [
     CoursesComponent,
     CourseFormComponent,
-    CoursesListComponent,
-    LoginComponent,
-    CreateAccountComponent
+    CoursesListComponent
   ],
   imports: [
     CommonModule,
