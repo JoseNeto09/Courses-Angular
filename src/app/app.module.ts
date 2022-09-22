@@ -7,12 +7,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './account/login/login.component';
+import { CrateAccountComponent } from './account/crate-account/crate-account.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    CrateAccountComponent
   ],
   imports: [
     BrowserModule,
