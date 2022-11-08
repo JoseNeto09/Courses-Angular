@@ -47,11 +47,6 @@ export class CourseFormComponent implements OnInit {
     this.location.back();
   }
 
-  onDelete(){
-    this.service.delete(this.form.value)
-      .subscribe(this.onDelete);
-  }
-
   onSuccess(){
     this._snackBar.open('Curso Salvo Com Sucesso', ' ',  {duration: 5000});
   }

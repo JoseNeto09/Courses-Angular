@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
@@ -16,21 +17,26 @@ import { CoursesService } from '../../services/courses.service';
 
 export class CoursesComponent implements OnInit {
 
-  courses$: Observable <Course[]>;  
+  courses$: Observable <Course[]> | null = null;  
+  snackBar: any;
 
   constructor(private coursesService: CoursesService,
     public dialog: MatDialog,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private _snackBar: MatSnackBar
     ) { 
+      this.refresh();
+  }
 
+  refresh(){
     this.courses$ = this.coursesService.list()
     .pipe(
       catchError(error => {
         this.onError('Erro ao carregar Cursos.');
         return of([])
       })
-      )
+      );
   }
   
   onError(errorMsg: string) {
@@ -49,6 +55,15 @@ export class CoursesComponent implements OnInit {
   }
 
   onDelete(course: Course) {
-    this.router.navigate(['delete', course._id], { relativeTo: this.route });
+    this.coursesService.remove(course._id).subscribe(
+      () => {
+        this.refresh();
+        this._snackBar.open('Curso Removido com sucesso', 'X',   {
+          duration: 5000,
+          horizontalPosition: 'center'
+        });
+      },
+      () => this.onError('Erro ao tentar remover o curso')
+    );
   }
 }
