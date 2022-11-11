@@ -1,20 +1,30 @@
 <mat-card>
-
-    <mat-toolbar color="primary">Detalhes do Novo Curso</mat-toolbar>
-
+    <mat-toolbar color="primary">
+        <h1>Detalhes do Curso</h1>
+    </mat-toolbar>
     <mat-card-content>
         <form [formGroup]="form">
             <mat-form-field class="full-width">
-                <input matInput placeholder="Nome" formControlName="name">
+                <input matInput placeholder="Titulo do Curso" formControlName="name">
             </mat-form-field>
-
             <mat-form-field class="full-width">
                 <mat-label>Categoria</mat-label>
                 <mat-select formControlName="categoria">
                     <mat-option value="null"></mat-option>
                     <mat-option value="front-end">Front-end</mat-option>
                     <mat-option value="back-end">Back-end</mat-option>
+                    <mat-option value="back-end">Ux Ui</mat-option>
+                    <mat-option value="back-end">Ciência de dados</mat-option>
                 </mat-select>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Carga Horária</mat-label>
+            <mat-select formControlName="cargahoraria">
+                <mat-option value="null"></mat-option>
+                <mat-option value="quarentahoras">40h</mat-option>
+                <mat-option value="sessentahoras">60h</mat-option>
+                <mat-option value="sentoevinteoito">128h</mat-option>
+            </mat-select>
             </mat-form-field>
         </form>
     </mat-card-content>
