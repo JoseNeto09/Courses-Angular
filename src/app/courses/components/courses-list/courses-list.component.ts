@@ -7,13 +7,12 @@ import { Course } from '../../model/course';
   styleUrls: ['./courses-list.component.scss']
 })
 export class CoursesListComponent implements OnInit {
-
   @Input() courses: Course[] = [];
   @Output() add = new EventEmitter(false);
   @Output() edit = new EventEmitter(false);
   @Output() delete = new EventEmitter(false);
   
-  readonly displayedColumns = ['name','categoria','actions'];
+  readonly displayedColumns = ['name','categoria','cargahoraria','actions'];
 
   constructor() { }
 

@@ -18,7 +18,8 @@ export class CourseFormComponent implements OnInit {
   form = this.formBuilder.group({
     _id:[''],
     name: [''],
-    categoria: ['']
+    categoria: [''],
+    cargahoraria: ['']
   });
 
   constructor(private formBuilder: NonNullableFormBuilder,
@@ -34,7 +35,8 @@ export class CourseFormComponent implements OnInit {
     this.form.setValue({
       _id: course._id,
       name: course.name,
-      categoria: course.categoria
+      categoria: course.categoria,
+      cargahoraria: course.cargahoraria
     })
   }
   
