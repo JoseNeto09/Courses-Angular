@@ -1,6 +1,6 @@
 
 mat-card {
-    max-width: 70%;
+    max-width: 60%;
     margin: 4em auto;
     text-align: center;
 }
@@ -8,10 +8,11 @@ mat-card {
 mat-toolbar{
     border-radius: 6px;
     justify-content: center;
+    box-shadow: 6px;
 }
 
 mat-toolbar h1{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 35px;
 }
 .colum-flex{

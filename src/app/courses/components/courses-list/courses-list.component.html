@@ -5,7 +5,7 @@
       <mat-header-cell  *matHeaderCellDef> Curso </mat-header-cell>
       <mat-cell  *matCellDef="let course"> {{ course.name }} </mat-cell>
     </ng-container>
-  
+
     <!-- Categoria Column -->
     <ng-container matColumnDef="categoria">
       <mat-header-cell *matHeaderCellDef> categoria </mat-header-cell>
@@ -20,7 +20,7 @@
         <mat-icon aria-hidden="false" aria-label="Carga Horária">{{ course.cargahoraria }}</mat-icon>
       </mat-cell>
     </ng-container>
--->
+
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
       <mat-header-cell *matHeaderCellDef class="actions-column-header">
@@ -40,7 +40,7 @@
       </mat-cell>
 
     </ng-container>
-  
+
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
